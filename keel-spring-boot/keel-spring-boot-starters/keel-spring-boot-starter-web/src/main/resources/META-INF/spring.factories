@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+jp.fintan.keel.spring.boot.autoconfigure.web.token.TransactionTokenAutoConfiguration
