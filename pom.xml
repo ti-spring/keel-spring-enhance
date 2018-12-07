@@ -140,7 +140,22 @@
           </execution>
         </executions>
         <configuration>
-          <generateGitPropertiesFile>true</generateGitPropertiesFile>
+          <generateGitPropertiesFile>false</generateGitPropertiesFile>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+            </manifest>
+            <manifestEntries>
+              <git-hash>${git.commit.id}</git-hash>
+            </manifestEntries>
+          </archive>
         </configuration>
       </plugin>
     </plugins>
