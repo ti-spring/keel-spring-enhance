@@ -25,7 +25,7 @@ package jp.fintan.keel.spring.web.mvc.support;
 
 import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 import org.springframework.web.servlet.support.RequestDataValueProcessor;
 

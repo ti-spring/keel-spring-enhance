@@ -1,27 +1,20 @@
 package jp.fintan.keel.spring.sample.web.token;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.redirectedUrl;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.xpath;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import jp.fintan.keel.spring.web.token.transaction.TransactionToken;
-import jp.fintan.keel.spring.web.token.transaction.TransactionTokenInterceptor;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpSession;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import jp.fintan.keel.spring.web.token.transaction.TransactionToken;
+import jp.fintan.keel.spring.web.token.transaction.TransactionTokenInterceptor;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = TransactionTokenCheckSampleApplication.class)
+@SpringBootTest
 @AutoConfigureMockMvc
 public class UserControllerTest {
 
